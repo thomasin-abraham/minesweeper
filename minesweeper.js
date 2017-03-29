@@ -86,9 +86,7 @@ function changeTime() {
 
 function selectLevel() {
     var levelButtons = document.getElementsByClassName("gameinfo")[0].children
-    for(var i = 0; i < levelButtons.length; i++) {
-      levelButtons[i].className = "levelButton b" + i
-    }
+    document.getElementsByClassName("onLevel")[0].classList.remove("onLevel")
     switch (size) {
       case 3:
       levelButtons[0].classList.add("onLevel")
