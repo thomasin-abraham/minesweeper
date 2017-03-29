@@ -107,11 +107,6 @@ function selectLevel() {
 
 function countSurroundingMines (cell) {
     var surrounding = lib.getSurroundingCells(cell.row, cell.col);
-    var count = 0;
-    for(var i = 0; i < surrounding.length; i++) {
-      if (surrounding[i].isMine === true) {
-        count++;
-      }
-    }
+    var count = surrounding.filter(function(c) {return c.isMine === true}).length
     cell.surroundingMines = count;
 }
