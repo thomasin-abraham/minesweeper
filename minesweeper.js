@@ -76,7 +76,6 @@ function startTimer() {
 }
 
 function stopTimer() {
-  console.log(pausetime)
   clearInterval(timer)
   if (resumetime.classList.contains("noshow")) {
   pausetime.classList.add('noshow');
