@@ -36,7 +36,7 @@ body {
   outline:none;
 }
 
-#message, #notes {
+#message {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,6 +50,7 @@ body {
 
 .gameinfo {
   text-align: center;
+  margin-top: -5px;
   margin-bottom: 20px;
 }
 
@@ -73,33 +74,8 @@ body {
   justify-content: center;
 }
 
-/*.board div:hover {
-  background-color: white;
-  color: #FF82AB;
-  cursor: pointer;
-}*/
-
 #timer {
   color: #fff;
-  font-size: 2em;
-}
-
-.toggletime {
-  background-color: #FF82AB;
-  color: #fff;
-  border: none;
-  font-size: 1em;
-}
-
-#pausetime:before {
-  content: '\f28c';
-  font-family:FontAwesome;
-  font-size: 2em;
-}
-
-#resumetime:before {
-  content:'\f01d';
-  font-family:FontAwesome;
   font-size: 2em;
 }
 
@@ -111,10 +87,6 @@ div.mine {
 div.mine:hover {
   background-color: orange;
   color:#fff;
-}
-
-.noshow {
-  display: none;
 }
 
 div.hidden {

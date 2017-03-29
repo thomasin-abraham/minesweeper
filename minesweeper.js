@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
-// Global Variables
+// Initial Variables
 var size = 4
+var totalMines = 3
 var time = 0;
 var board = {
   cells: []
@@ -13,7 +14,7 @@ function startGame () {
       countSurroundingMines(board.cells[i])
     }
     lib.initBoard()
-    displayMessage("minesweeper")
+    displayMessage("minesweeper<br><br>select level:")
     clearInterval(timer)
     time = 0;
     startTimer()
@@ -22,7 +23,8 @@ function startGame () {
     document.addEventListener("contextmenu", checkForWin)
 }
 
-function resetGame (level) {
+function resetGame (level, num) {
+    totalMines = num
     size = level
     document.getElementsByClassName('board')[0].innerHTML = "";
     board.cells = []
@@ -32,22 +34,23 @@ function resetGame (level) {
 function generateBoard(size) {
     for(var i=1; i<=size; i++) {
       for(var j=1; j<=size; j++) {
-        var randomNum = Math.random()
-        var mineCount = 0
-        var generateMine = false;
-        if (randomNum > 0.8) {
-          generateMine = true;
-          mineCount++
-        }
         var generateCell = {
           row: i,
           col: j,
-          isMine: generateMine,
+          isMine: false,
           isMarked: false,
           hidden: true,
           surroundingMines: 0
         }
         board.cells.push(generateCell)
+      }
+    }
+    var mineCount = 0
+    while (mineCount < totalMines) {
+      var randomNum = Math.floor(Math.random() *  (size*size))
+      if (!board.cells[randomNum].isMine) {
+      board.cells[randomNum].isMine = true
+      mineCount++
       }
     }
 }
@@ -62,7 +65,7 @@ function checkForWin () {
       }
     }
     stopTimer()
-    displayMessage("you win!")
+    displayMessage("you win!<br><br>select level:")
 }
 
 
