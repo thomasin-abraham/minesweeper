@@ -73,11 +73,11 @@ body {
   justify-content: center;
 }
 
-.board div:hover {
+/*.board div:hover {
   background-color: white;
   color: #FF82AB;
   cursor: pointer;
-}
+}*/
 
 #timer {
   color: #fff;
@@ -126,6 +126,7 @@ div.hidden {
 div.hidden:hover {
   background: #fff;
   color: #FF82AB;
+  cursor: pointer;
 }
 
 div.marked, div.marked:hover {
