@@ -72,33 +72,15 @@ displayMessage("you win!")
 
 function startTimer() {
   timer = setInterval(changeTime,1000)
-  pausetime.classList.remove('noshow')
 }
 
 function stopTimer() {
   clearInterval(timer)
-  if (resumetime.classList.contains("noshow")) {
-  pausetime.classList.add('noshow');
-} else {
-  resumetime.classList.add('noshow');
-}
 }
 
 function changeTime() {
   time++;
   document.getElementById('timer').innerHTML = time;
-}
-
-function pauseTimer() {
-  clearInterval(timer)
-  pausetime.classList.add('noshow');
-  resumetime.classList.remove('noshow');
-}
-
-function resumeTimer() {
-  startTimer()
-  resumetime.classList.add('noshow');
-  pausetime.classList.remove('noshow');
 }
 
 
