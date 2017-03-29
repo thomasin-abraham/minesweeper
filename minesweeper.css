@@ -8,31 +8,65 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  background-color: #FF82AB;
+}
+
+.levelButton {
+  padding:10px;
+  border: 1px #fff dotted;
+  border-radius: 50%;
+  background-color: #FF82AB;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  color: #fff;
+  line-height: 20px;
+}
+
+.onLevel {
+  border: 1px #fff solid;
+}
+
+.levelButton:hover {
+  cursor: pointer;
+  border: 1px #fff solid;
+}
+
+.levelButton:focus {
+  outline:none;
 }
 
 #message, #notes {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  color: #fff;
 }
 
 #message {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.gameinfo {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom:20px;
 }
 
 .board div {
-  color: green;
+  color: #fff;
   font-size: 2rem;
   width: 75px;
   height: 75px;
-  border: 1px #ccc dotted;
+  border: 1px #fff dashed;
   border-radius: 10%;
-  background-color: white;
+  background-color: #FF82AB;
   margin: 3px;
   display: flex;
   align-items: center;
@@ -41,20 +75,60 @@ body {
 
 .board div:hover {
   background-color: white;
+  color: #FF82AB;
+  cursor: pointer;
 }
 
-div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/bomb.svg") crimson;
+#timer {
+  color: #fff;
+  font-size: 2em;
+}
+
+.toggletime {
+  background-color: #FF82AB;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+}
+
+#pausetime:before {
+  content: '\f28c';
+  font-family:FontAwesome;
+  font-size: 2em;
+}
+
+#resumetime:before {
+  content:'\f01d';
+  font-family:FontAwesome;
+  font-size: 2em;
+}
+
+div.mine {
+  background: no-repeat center/60% url("images/bomb.png") orange;
+  border:none;
+}
+
+div.mine:hover {
+  background-color: orange;
+  color:#fff;
+}
+
+.noshow {
+  display: none;
 }
 
 div.hidden {
-  background: #eee;
+  background: #FF82AB;
+  border: 1px #fff solid;
+  color: #FF82AB;
 }
 
 div.hidden:hover {
-  background: #ccc;
+  background: #fff;
+  color: #FF82AB;
 }
 
 div.marked, div.marked:hover {
-  background: no-repeat center/60% url("images/mark.svg") deepskyblue;
+  background: no-repeat center/60% url("images/flag.png") #FF82AB;
+  border:1px #FF82AB solid;
 }

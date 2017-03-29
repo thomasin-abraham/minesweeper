@@ -3,15 +3,23 @@
   <head>
     <title>Minesweeper</title>
     <link rel="stylesheet" href="minesweeper.css">
-    <script src="lib/tests.js"></script>
     <script src="lib/lib.js"></script>
     <script src="minesweeper.js"></script>
   </head>
   <body>
-    <div id="message"></div>
-    <div id="notes"></div>
+    <div id="message">minesweeper</div>
+    <div class="gameinfo">
+      <button class="levelButton b0" onclick="resetGame(3)">1</button>
+      <button class="levelButton b1 onLevel" onclick="resetGame(4)">2</button>
+      <button class="levelButton b2" onclick="resetGame(5)">3</button>
+      <button class="levelButton b3" onclick="resetGame(6)">4</button><br>
+    </div>
     <div class="board">
-
+    </div>
+    <div class="gameinfo">
+      <div id="timer">0</div>
+      <button class="toggletime" id="pausetime" onclick="pauseTimer()"></button>
+      <button class="toggletime noshow" id="resumetime" onclick="resumeTimer()"></button>
     </div>
   </body>
 </html>
