@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', startGame)
 // Global Variables
 var size = 4
 var time = 0;
-pauseTime = document.getElementById('pausetime');
-resumeTime = document.getElementById('resumetime');
 var board = {
   cells: []
 }
