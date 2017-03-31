@@ -6,20 +6,22 @@ html, body {
 body {
   display: flex;
   align-items: center;
-  justify-content: flex-center;
   flex-direction: column;
   background-color: #FF82AB;
-  max-height: 95%;
-  min-height: 580px;
-  margin-bottom: none;
+max-height: 97%;
+}
+
+.container {
 }
 
 .levelButton {
+  display: inline-block;
   padding:10px;
   border: 1px #fff dotted;
   border-radius: 50%;
   background-color: #FF82AB;
   width: 40px;
+  margin: 0 2px 0 2px;
   height: 40px;
   font-size: 1.5em;
   color: #fff;
@@ -41,9 +43,6 @@ body {
 }
 
 #message {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   color: #fff;
 }
@@ -53,15 +52,15 @@ body {
 }
 
 .gameinfo {
-  text-align: center;
   margin-top: -5px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .board div {
@@ -111,11 +110,15 @@ div.marked, div.marked:hover {
 }
 
 .bottomsticky {
-  position: absolute;
-  width: 100%;
+  display: flex;
+  position: relative;
+  flex-shrink:0;
+  margin-top: auto;
+  align-content: center;
   bottom: 16px;
   left: 0;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .returnsticky {
