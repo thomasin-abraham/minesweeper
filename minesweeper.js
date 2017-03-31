@@ -20,6 +20,7 @@ function startGame () {
     startTimer()
     selectLevel()
     document.addEventListener("click", checkForWin)
+    document.addEventListener("touchend", checkForWin)
     document.addEventListener("contextmenu", checkForWin)
 }
 
