@@ -82,8 +82,13 @@ max-height: 97%;
   font-size: 2em;
 }
 
+div.happywin {
+  background: no-repeat center/90% url("images/smile.png") #4DBD33;
+  border: 1px #4DBD33 solid;
+}
+
 div.mine {
-  background: no-repeat center/60% url("images/bomb.png") orange;
+  background: no-repeat center/80% url("images/bomb.png") orange;
   border:1px orange solid;
 }
 
@@ -105,7 +110,7 @@ div.hidden:hover {
 }
 
 div.marked, div.marked:hover {
-  background: no-repeat center/60% url("images/flag.png") #FF82AB;
+  background: no-repeat center/70% url("images/flag.png") #FF82AB;
   border:1px #FF82AB solid;
 }
 

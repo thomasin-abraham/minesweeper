@@ -66,6 +66,14 @@ function checkForWin () {
       }
     }
     stopTimer()
+    makeArray(document.querySelectorAll('.mine'))
+      .forEach(function(element) {
+        element.classList.remove('mine')
+        element.classList.remove('marked')
+        element.classList.remove('hidden')
+        element.classList.add('happywin')
+      })
+
     displayMessage("you win!<br><br>select level:")
 }
 
