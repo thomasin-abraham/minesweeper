@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   background-color: #FF82AB;
   max-height: 95%;
+  min-height: 580px;
   margin-bottom: none;
 }
 
