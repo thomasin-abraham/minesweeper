@@ -69,6 +69,7 @@ function checkForWin () {
 }
 
 
+
 // Timer code
 
 function startTimer() {
