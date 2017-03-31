@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Open-Sans', sans-serif;
 }
 
 body {
@@ -9,6 +9,8 @@ body {
   justify-content: flex-center;
   flex-direction: column;
   background-color: #FF82AB;
+  max-height: 95%;
+  margin-bottom: none;
 }
 
 .levelButton {
@@ -25,6 +27,7 @@ body {
 
 .onLevel {
   border: 1px #fff solid;
+  background-color: #FF94B7;
 }
 
 .levelButton:hover {
@@ -104,4 +107,22 @@ div.hidden:hover {
 div.marked, div.marked:hover {
   background: no-repeat center/60% url("images/flag.png") #FF82AB;
   border:1px #FF82AB solid;
+}
+
+.bottomsticky {
+  position: absolute;
+  width: 100%;
+  bottom: 16px;
+  left: 0;
+  text-align: center;
+}
+
+.returnsticky {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  border: 1px #fff solid;
+  border-radius: 8px;
+  font-family: 'Abel';
+  font-size: 1.1rem;
 }
